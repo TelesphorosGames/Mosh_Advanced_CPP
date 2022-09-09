@@ -95,3 +95,14 @@ void SortArray(int ArrayToSort[], int SizeOfArray)
 }
  * */
 
+/* Implement the swap function for swapping two variables using pointers. 
+
+void SwapIntegersViaPointers(int* first, int* second)
+{
+        int TempInteger = *first;
+        *first = *second;
+        *second = TempInteger;
+        
+}
+
+*/

@@ -3,22 +3,10 @@
 
 using namespace std;
 
-
-
-
 int main()
 {
-        
-        
         return 0;
 }
-
-
-
-
-
-
-
 
 /* Create a function that recieves two integers and returns the maximum of the two. 
 //
@@ -57,7 +45,6 @@ int main()
         Create a function for finding a value in an integer array.
         If the target value exists, return its index , otherwise return -1. 
 
-
 int LinearArraySearch(const int ArrayToSearch[], int SizeOfArray, int NumberToSearchFor)
 {
        for(int i = 0 ; i < SizeOfArray; i++)
@@ -74,8 +61,6 @@ int LinearArraySearch(const int ArrayToSearch[], int SizeOfArray, int NumberToSe
 /* Bubble Sort Algorithm
  *
  * Create a function that takes an array of integers and sorts them low to high.
- *
- *
 *
 void SortArray(int ArrayToSort[], int SizeOfArray)
 {
@@ -106,3 +91,22 @@ void SwapIntegersViaPointers(int* first, int* second)
 }
 
 */
+
+/* Given This array : int numbers[] = {10, 20, 30};
+        1. Create a pointer that points to the last element in this array.
+        2. Use a while loop to iterate over this array, and print the numbers in reverse order.
+
+        // IN MAIN PROGRAM : 
+
+int numbers[] = {10, 20, 30};
+int* NumbersPtr = numbers+2;       // int* NumbersPtr = &numbers[size(numbers)-1]
+
+while(*NumbersPtr > 0)                // while (NumbersPtr >= numbers)
+{
+        cout << *NumbersPtr << endl;
+        NumbersPtr -= 1;                // NumbersPtr--
+}
+
+*/
+
+

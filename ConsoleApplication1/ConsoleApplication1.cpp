@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -109,4 +110,17 @@ while(*NumbersPtr > 0)                // while (NumbersPtr >= numbers)
 
 */
 
+
+/* Given someone's first and last name as a string, write code to extract their first and last names.
+ *
+ *      in main function :
+ *      
+*      string full_name = "Colin Telesphoros";
+        cout << "Full name: " << full_name << endl;
+        const auto index_of_space = full_name.find_first_of(' ');
+        string FirstName = full_name.substr(0, index_of_space);
+        string LastName = full_name.substr(index_of_space+1);
+        cout << "First Name :" << FirstName << endl << "Last Name: " << LastName << endl;
+ * 
+ */
 

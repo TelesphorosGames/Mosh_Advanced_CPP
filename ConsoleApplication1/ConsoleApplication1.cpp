@@ -1,12 +1,12 @@
 #include <cstdio>
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main()
 {
-        return 0;
+      
+
 }
 
 /* Create a function that recieves two integers and returns the maximum of the two. 
@@ -110,7 +110,6 @@ while(*NumbersPtr > 0)                // while (NumbersPtr >= numbers)
 
 */
 
-
 /* Given someone's first and last name as a string, write code to extract their first and last names.
  *
  *      in main function :
@@ -124,3 +123,83 @@ while(*NumbersPtr > 0)                // while (NumbersPtr >= numbers)
  * 
  */
 
+/* Define a structure for representing customers:
+ 
+        ID Number
+        Name
+        Email
+ 
+        1. Ask the user for these values, store them in a customer object, and
+        print the result.
+
+        2. Define a structure for representing an address.
+ 
+         - Street, City, and Zipcode
+ 
+        Nest the address structure within the customer structure
+ 
+         Create and initialize a customer.
+  
+struct AddressOfCustomer
+{
+        string Street;
+        string City;
+        int ZipCode{};
+};
+
+struct Customer
+{
+        int ID_Number{} ;
+        string Name;
+        string Email;
+        AddressOfCustomer Address;
+};
+
+// IN FUNCTION :
+        
+Customer FirstCustomer{0, "", "", {}};
+
+cout << "ID Number: \n" ;
+cin >> FirstCustomer.ID_Number;
+cout << "Name: \n" ;
+cin >> FirstCustomer.Name;
+cout << "Email: \n" ;
+cin >> FirstCustomer.Email;
+
+cout << "\nID Number: " << FirstCustomer.ID_Number ;
+cout << "\nName: " << FirstCustomer.Name ;
+cout << "\nEmail: " << FirstCustomer.Email ;   
+        
+        return 0;
+//  
+*/
+
+/* Define a structure for representing a point.
+ *
+ *  - X, Y
+ *  
+ *      Overload the equality (==) and stream insertion operators (<<)
+ *      for points.
+ *
+*      
+struct Point
+{
+        int x{};
+        int y{};
+};
+
+bool operator==(const Point& first, const Point& second)
+{
+        return (first.x == second.x && first.y == second.y);
+}
+
+ostream& operator<<(ostream& stream, const Point& point)
+{
+        stream << "X: " <<  point.x << " Y: " << point.y ;    
+        return stream;                         //  /// could have been on one line
+}
+
+ *      
+ *      
+ *
+ * */

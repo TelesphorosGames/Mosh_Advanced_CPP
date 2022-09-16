@@ -1,12 +1,16 @@
 #include <cstdio>
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <iomanip>
 
 using namespace std;
 
+
 int main()
 {
-      
-
+      return 0;
+        
 }
 
 /* Create a function that recieves two integers and returns the maximum of the two. 
@@ -203,3 +207,84 @@ ostream& operator<<(ostream& stream, const Point& point)
  *      
  *
  * */
+
+/* Write a re-usable function for writing an integer input from a user to a stream
+ *
+ *
+* 
+int GetInteger(const string &Input)
+{
+        int StoredNumber;
+        while(true)
+        {
+                cout << Input ;
+                cin >> StoredNumber;
+                if(cin.fail())
+                {
+                        cout << "Enter a valid number" << endl;
+                        cin.clear();
+                        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
+                else break;
+        }
+        return StoredNumber;
+}
+
+ */
+
+/* Write a re-usable function for converting a double into a string using a stringstream
+ *
+* string ConvertDoubleToString(const double& input, int precision)
+{
+        double Number = input;
+        stringstream stream;
+        stream << fixed << setprecision(precision) << Number ; 
+        return stream.str();
+}
+
+IN MAIN FUNCTION : 
+
+double TestInputDouble{12.34567};
+        while(true)
+        {
+          
+                  cin >> TestInputDouble ;
+                  if(cin.fail())
+                  {
+                          cout << "Enter a number fool" ;
+                          cin.clear();
+                          cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                  }
+                  else break;      
+        }
+        
+        
+        cout << ConvertDoubleToString(TestInputDouble);
+
+ */
+
+/* Given the following string, write a function to parse this into a movie structure.
+ *
+struct Movie
+{
+        string Title{};
+        int ReleaseYear{};
+};
+        
+Movie ParseMovieStruct(string ToParse)
+{
+          
+        stringstream stream;
+        Movie ReturnedMovie{};
+        
+        stream.str(ToParse);
+        
+        getline(stream, ReturnedMovie.Title, ',');
+        stream >> ReturnedMovie.ReleaseYear;
+          
+        return ReturnedMovie;
+                      
+}
+
+ *  
+ */

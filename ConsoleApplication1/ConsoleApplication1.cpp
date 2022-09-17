@@ -3,6 +3,8 @@
 #include <fstream>
 #include <sstream>
 #include <iomanip>
+#include "Rectangle.h"
+#include "TextBox.h"
 
 using namespace std;
 

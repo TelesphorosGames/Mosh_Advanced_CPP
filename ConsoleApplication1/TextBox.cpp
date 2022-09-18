@@ -1,6 +1,6 @@
 ﻿#include "TextBox.h"
 
-TextBox::TextBox()
+TextBox::TextBox(const string& Value) : Value{Value} 
 {
     
 }

@@ -7,7 +7,8 @@ using namespace std;
 class TextBox
 {
 public:
-    TextBox();
+    TextBox() = default;
+    explicit TextBox(const string& Value);
     
     void SetValue(const string& value);
    

@@ -13,3 +13,17 @@ bool Length::operator==(int ComparingLength) const
 {
     return LengthValue == ComparingLength;
 }
+
+istream& operator>>(istream& stream, Length& length)
+{
+    int value;
+    stream >> value;
+    length.set_length_value(value);
+    return stream;
+}
+
+ostream& operator<<(ostream& stream, Length& length)
+{
+    stream << length.length_value();
+    return {stream};
+}

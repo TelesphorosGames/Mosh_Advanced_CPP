@@ -5,9 +5,10 @@
 #include <iomanip>
 #include "Rectangle.h"
 #include "TextBox.h"
+#include "Point.h"
+#include "Length.h"
 
 using namespace std;
-
 
 int main()
 {

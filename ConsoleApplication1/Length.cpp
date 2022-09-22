@@ -14,6 +14,24 @@ bool Length::operator==(int ComparingLength) const
     return LengthValue == ComparingLength;
 }
 
+Length& Length::operator++()
+{
+    LengthValue++;
+    return  *this;
+}
+
+Length Length::operator++(int)
+{
+    Length copy = *this;
+    operator++();
+    return  copy;
+}
+
+Length::operator int() const
+{
+    return LengthValue;
+}
+
 istream& operator>>(istream& stream, Length& length)
 {
     int value;

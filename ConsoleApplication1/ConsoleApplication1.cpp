@@ -7,13 +7,13 @@
 #include "TextBox.h"
 #include "Point.h"
 #include "Length.h"
+#include "Array.h"
 
 using namespace std;
 
 int main()
 {
-      return 0;
-        
+               
 }
 
 /* Create a function that recieves two integers and returns the maximum of the two. 

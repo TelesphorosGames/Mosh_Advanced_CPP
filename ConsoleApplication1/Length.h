@@ -12,6 +12,12 @@ public:
     bool operator==(const Length& ComparingLength) const;
     bool operator==(int ComparingLength) const;
 
+    Length& operator++(); // prefix operator
+    Length operator++(int); // postfix syntax
+
+    operator int() const; 
+
+    
     int length_value() const {return LengthValue;}
 
     void set_length_value(int length_value)

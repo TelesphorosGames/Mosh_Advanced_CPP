@@ -11,6 +11,9 @@ public:
 
     bool operator==(const Point& PointToCompare) const;
     Point operator+ (const Point& point) const;
+
+    Point& operator++(); // prefix increment operator
+    Point operator ++(int); //postfix operator
     
     int GetX() const { return x; }
     int GetY() const { return y; } 

@@ -154,6 +154,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Array.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
     <ClCompile Include="Length.cpp" />
     <ClCompile Include="Point.cpp" />
@@ -162,6 +163,7 @@
     <ClCompile Include="TextBox.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Array.h" />
     <ClInclude Include="Length.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Rectangle.h" />

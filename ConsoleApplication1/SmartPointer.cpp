@@ -10,3 +10,8 @@ SmartPointer::~SmartPointer()
     delete Pointer;
     Pointer = nullptr;
 }
+
+int& SmartPointer::operator*()
+{
+    return *Pointer; 
+}

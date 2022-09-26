@@ -1,6 +1,7 @@
 ﻿#pragma once
+#include "Shape.h"
 
-class Rectangle
+class Rectangle : public Shape
 {
 public:
 
@@ -11,7 +12,7 @@ public:
     int GetHeight() const {return Height; }
     void SetHeight(int height);
     
-    void Draw();
+    virtual void Draw() override;
     int GetArea();
 
 private:

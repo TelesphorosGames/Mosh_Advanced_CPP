@@ -12,7 +12,7 @@ public:
 
 protected:
 
-    virtual void Draw();
+    virtual void Draw() =0;
 
 private:
     

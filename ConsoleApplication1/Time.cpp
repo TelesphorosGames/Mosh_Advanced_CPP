@@ -2,37 +2,37 @@
 
 #include <stdexcept>
 
-Time::Time(int hour, int minute, int second) :
-Hour(GetHour()),
-Minute(GetMinute()),
-Second(GetSecond())
+Time::Time(const int hour, const int minute, const int second) :
+Hour(ValidateHour(hour)),
+Minute(ValidateMinute(minute)),
+Second(ValidateSecond(second))
 {
 }
 
-int Time::GetHour() const
+int Time::ValidateHour(const int& hour)
 {
-    if (Hour < 0 || Hour > 24)
+    if (hour < 0 || hour > 24)
     {
         throw std::invalid_argument("Hour invalid");
     }
-    return Hour;
+    return hour;
 }
 
-int Time::GetMinute() const
+int Time::ValidateMinute(const int& minute)
 {
-    if (Minute < 0 || Minute > 60)
+    if (minute < 0 || minute > 60)
     {
         throw std::invalid_argument("Miunute invalid");
     }
-    return Minute;
+    return minute;
 }
 
-int Time::GetSecond() const
+int Time::ValidateSecond(const int& second)
 {
-    if (Second < 0 || Second > 60)
+    if (second < 0 || second > 60)
     {
         throw std::invalid_argument("Second invalid");
     }
-    return Second;
+    return second;
 }
 

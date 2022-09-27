@@ -6,13 +6,17 @@ public:
 
     Time(int hour, int minute, int second);
 
-    int GetHour() const;
-    int GetMinute() const;
-    int GetSecond() const;
+    int GetHour() const {return Hour ; }
+    int GetMinute() const {return Minute ; }
+    int GetSecond() const {return Second ; }
+
+    static int ValidateHour(const int& hour);
+    static int ValidateMinute(const int& minute);
+    static int ValidateSecond(const int& second);
     
 private:
-    int Hour;
-    int Minute;
-    int Second;
+    int Hour{16};
+    int Minute{40};
+    int Second{04};
     
 };

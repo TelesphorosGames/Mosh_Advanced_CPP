@@ -2,37 +2,37 @@
 
 #include <stdexcept>
 
-Date::Date(int year, int month, int day) :
-Year(GetYear()),
-Month(GetMonth()),
-Day(GetDay())
+Date::Date(const int year, const int month, const int day) :
+Year(ValidateYear(year)),
+Month(ValidateMonth(month)),
+Day(ValidateDay(day))
 {
     
 }
 
-int Date::GetYear() const
+int Date::ValidateYear(const int& year)
 {
-    if (Year < 1900 || Year > 2022)
+    if (year <1900 || year > 2022)
     {
         throw std::invalid_argument("Year invalid");
     }
-    return Year;
+    return year;
 }
 
-int Date::GetMonth() const
+int Date::ValidateMonth(const int& month)
 {
-    if (Month < 1 || Month > 12)
+    if (month < 1 || month > 12)
     {
         throw std::invalid_argument("Month invalid");
     }
-    return Month;
+    return month;
 }
 
-int Date::GetDay() const
+int Date::ValidateDay(const int& day)
 {
-    if (Day < 1 || Day > 31)
+    if (day < 1 || day > 31)
     {
         throw std::invalid_argument("Day invalid");
     }
-    return Day;
+    return day;
 }

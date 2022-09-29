@@ -160,6 +160,7 @@
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="Length.cpp" />
+    <ClCompile Include="Pair.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Shape.cpp" />
@@ -173,6 +174,7 @@
     <ClInclude Include="Date.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Length.h" />
+    <ClInclude Include="Pair.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Shape.h" />

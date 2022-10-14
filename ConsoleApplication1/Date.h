@@ -1,11 +1,11 @@
 ﻿#pragma once
+#include <iostream>
 
 
 class Date
 {
 public:
-    Date(int year, int month, int day);
-
+   Date(const int year,const int month,const int day);
   
     
     int GetYear() const {return Year ; }
@@ -17,12 +17,18 @@ public:
     static int ValidateMonth(const int& month);
     static int ValidateDay(const int& day);
 
+
+    // Comparison operator :
+
+    bool operator>(const Date& Other) const; 
+    bool operator<(const Date& Other) const; 
     
 private:
 
     int Year{1990};
     int Month{2};
-    int Day{19};
+    int Day{19}; 
+
     
     
 };

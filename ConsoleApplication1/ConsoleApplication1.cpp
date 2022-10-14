@@ -14,7 +14,35 @@ using namespace std;
 
 int main()
 {
- 
+        const Date Birthday1 = {1990, 2, 19};
+        const Date Birthday2 = {1990, 2, 20};
+        const Date Birthday3 = {1990, 1, 15};
+        Date Birthdays[3] = {Birthday1, Birthday2, Birthday3};
+
+        // for(Date Birthday : Birthdays)
+        // {
+        //         if(Birthday2>Birthday1) cout<< "True";
+        //          else cout << "False" ; 
+        // }
+
+        for(int pass = 0 ; pass < 3; pass++)
+        {
+                for ( int i = 0; i < 3 ; i++)
+                {
+                        if(Birthdays[i] < Birthdays[i-1])
+                        {
+                                const Date TempSwitchDate = Birthdays[i];
+                                Birthdays[i] = Birthdays[i - 1];
+                                Birthdays[i - 1] = TempSwitchDate;
+                        }
+                }
+        }
+        cout << Birthdays[0].GetYear() << ", " << Birthdays[0].GetMonth() << ", " << Birthdays[0].GetDay() << "\n";
+        cout << Birthdays[1].GetYear() << ", " << Birthdays[1].GetMonth() << ", " << Birthdays[1].GetDay() << "\n";
+        cout << Birthdays[2].GetYear() << ", " << Birthdays[2].GetMonth() << ", " << Birthdays[2].GetDay() << "\n";
+        
+        
+       
 }
 
 /* Create a function that recieves two integers and returns the maximum of the two. 

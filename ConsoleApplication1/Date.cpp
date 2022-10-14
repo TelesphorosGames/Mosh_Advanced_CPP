@@ -36,3 +36,38 @@ int Date::ValidateDay(const int& day)
     }
     return day;
 }
+
+bool Date::operator>(const Date& Other) const
+{
+   
+    if(Year == Other.Year)
+    {
+        if(Month>Other.Month) return true;
+        if(Month< Other.Month) return false;
+        if(Month == Other.Month )
+        {
+            if(Day > Other.Day) return true;
+            return false;
+        }
+    }
+    if(Year > Other.Year) return true;
+    if(Year< Other.Year) return false;
+    return false;
+}
+
+bool Date::operator<(const Date& Other) const
+{
+    if(Year == Other.Year)
+    {
+        if(Month>Other.Month) return false;
+        if(Month< Other.Month) return true;
+        if(Month == Other.Month )
+        {
+            if(Day > Other.Day) return false;
+            return true;
+        }
+    }
+    if(Year > Other.Year) return false;
+    if(Year< Other.Year) return true;
+    return false;
+}
